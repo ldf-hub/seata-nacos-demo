@@ -1,0 +1,22 @@
+server:
+  port: 2001
+spring:
+  application:
+    name: service-order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: "jdbc:mysql://101.34.45.104:3306/seata_order?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useSSL=false&serverTimezone=UTC"
+    username: "root"
+    password: "03790379"
+  cloud:
+#    loadbalancer:
+#      retry:
+#        enabled: false
+#    #nacos配置
+    nacos:
+      discovery:
+        server-addr: 101.34.45.104:8848
+        namespace: a1c640cc-0100-45fa-88cc-091618114bb7 #在nacos中创建的seata命名空间ID
+        group: SEATA_GROUP #seata配置的分组名称
+        username: "nacos"
+        password: "nacos"
