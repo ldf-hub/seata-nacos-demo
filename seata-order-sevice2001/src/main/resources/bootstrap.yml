@@ -20,3 +20,6 @@ spring:
         group: SEATA_GROUP #seata配置的分组名称
         username: "nacos"
         password: "nacos"
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
